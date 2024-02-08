@@ -1,0 +1,26 @@
+ID,firstname,lastname,title,birthday,function,FILE1,FILE2,FILE3
+1,Pavel,Konečný,Ing.,13.4.1981,správce sítě,1,1,1
+2,Zdeněk,Pokorný,,5.6.1970,skladník,1,0,0
+3,Jan,Kovář,Bc.,20.11.1984,programátor,0,1,0
+4,Roman,Bartoš,,1.1.1969,ředitel,0,0,0
+5,Michael,Brown,Mr,1980-11-25,Developer,1,0,0
+6,Emily,Miller,Miss,1992-09-14,Designer,0,1,0
+7,David,Williams,Mr,1978-07-30,Architect,1,1,0
+8,Sarah,Jones,Mrs,1983-04-18,Consultant,1,0,0
+9,Matthew,Davis,Mr,1998-02-05,Engineer,0,1,0
+10,Emma,Anderson,Mrs,1975-06-20,Manager,1,1,0
+11,James,Wilson,Mr,1989-12-08,Analyst,0,0,0
+12,Sophia,Taylor,Mrs,1987-03-17,Developer,1,1,0
+13,William,Moore,Mr,1993-08-02,Designer,0,0,0
+14,Samantha,Johnson,Mrs,1984-06-12,Engineer,1,0,0
+15,Michael,Anderson,Mr,1977-09-20,Manager,0,1,0
+16,Emily,Robinson,Miss,1990-04-05,Analyst,1,1,0
+17,David,Thomas,Mr,1982-11-15,Developer,0,0,0
+18,Sarah,Hall,Mrs,1979-08-28,Designer,1,0,0
+19,Matthew,Wilson,Mr,1993-02-10,Architect,0,1,0
+20,Emma,Davis,Mrs,1988-07-17,Consultant,1,1,0
+21,Olivia,Lee,Miss,1995-05-30,Engineer,0,0,0
+22,Liam,Wright,Mr,1986-03-08,Manager,1,1,0
+23,Ava,Jackson,Miss,1981-12-03,Analyst,0,1,0
+24,James,White,Mr,1997-10-18,Developer,1,0,0
+25,James,White,Mr,1997-10-18,Developer,1,0,0
