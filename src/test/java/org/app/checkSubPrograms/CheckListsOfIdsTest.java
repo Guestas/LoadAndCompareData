@@ -1,20 +1,21 @@
-package org.app.fileTests;
+package org.app.checkSubPrograms;
 
-import org.app.checkSubPrograms.CheckListsOfIds;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
-class TestsTest {
+import static org.junit.jupiter.api.Assertions.*;
 
+class CheckListsOfIdsTest {
 
     @Test
     void checkListForDuplicates() {
         List<Long> list = Arrays.asList(1L, 1L, 3L, 4L, 5L, 4L);
         List<Long> expected = Arrays.asList(1L, 4L);
 
-        List<Long> out = CheckListsOfIds.checkListForDuplicates(list, "main file");
+        List<Long> out = CheckListsOfIds.checkListForDuplicates(list);
         Assertions.assertNotNull(out);
         Assertions.assertEquals(expected, out);
     }
@@ -27,7 +28,7 @@ class TestsTest {
 
         List<Long> expected = Arrays.asList(1L, 2L);
 
-        List<Long> out = CheckListsOfIds.compareIdsMissingInSub(main, sub, "sub file");
+        List<Long> out = CheckListsOfIds.compareIdsMissingInSub(main, sub);
 
         Assertions.assertNotNull(out);
         Assertions.assertEquals(expected, out);
@@ -40,7 +41,7 @@ class TestsTest {
 
         List<Long> expected = Arrays.asList(6L, 7L);
 
-        List<Long> out = CheckListsOfIds.compareIdsRedundantInSub(main, sub, "sub file");
+        List<Long> out = CheckListsOfIds.compareIdsRedundantInSub(main, sub);
 
         Assertions.assertNotNull(out);
         Assertions.assertEquals(expected, out);
@@ -51,7 +52,7 @@ class TestsTest {
         List<Long> main = Arrays.asList(3L, 4L, 5L);
         List<Long> sub = Arrays.asList(3L, 4L, 5L);
 
-        boolean out = CheckListsOfIds.compareIfValuesAreSame(main, sub, "sub file");
+        boolean out = CheckListsOfIds.compareIfValuesAreSame(main, sub);
 
         Assertions.assertTrue(out);
     }
@@ -115,4 +116,5 @@ class TestsTest {
 
         Assertions.assertEquals(9, out);
     }
+
 }

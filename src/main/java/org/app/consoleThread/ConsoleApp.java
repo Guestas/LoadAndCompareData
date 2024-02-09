@@ -15,6 +15,11 @@ public class ConsoleApp {
     private String mainFile = null;
     private String[] subFilesNames = null;
 
+    /**
+     * Constructor for the ConsoleApp class.
+     * It initializes the ConsoleApp object by loading configuration from properties file.
+     * If an IOException occurs during file loading, it prints the stack trace and returns.
+     */
     public ConsoleApp() {
         //loading from properties
         Properties properties = new Properties();
@@ -30,11 +35,16 @@ public class ConsoleApp {
         this.subFilesNames = properties.getProperty("subFiles").split(",");
     }
 
+    /**
+     * Starts the ConsoleApp by scheduling periodic program execution and listening for stop command.
+     * The program runs periodically according to the specified periodTime.
+     * It listens for console input for the "stop" command to finish task and terminate the program.
+     */
     public void start() {
         // periodical program run
         Timer timer = getTimer(mainFile, subFilesNames, periodTime);
 
-        // Listen for console input for stop comand
+        // Listen for console input for stop command
         Scanner scanner = new Scanner(System.in);
         while (running) {
             String input = scanner.nextLine();
@@ -46,6 +56,14 @@ public class ConsoleApp {
         }
     }
 
+    /**
+     * Creates a timer that periodically loads the main file and its associated sub-files and make checks.
+     *
+     * @param mainFile The name of the main file to load.
+     * @param subFilesNames An array of sub-file names associated with the main file.
+     * @param periodTime The period between each execution of the timer task, in seconds.
+     * @return A Timer object for scheduling the task.
+     */
     private static Timer getTimer(String mainFile, String[] subFilesNames, Long periodTime) {
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {

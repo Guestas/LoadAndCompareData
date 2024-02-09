@@ -1,2 +1,2 @@
 ID,firstname,lastname,title,function
-1,Pavel,Konečný,Ing.,údržba
+1,Pavel,Konečný,Ing.,správce sítě
