@@ -8,4 +8,4 @@ App is with files where are prepared some data. You can just download it and sta
 
 File paths are in properties file with intervals between periods. 
 
-If you type stop in console it wil finish sub program and stop application works in IntelliJ console.
+If you type stop in console it wil finish sub program and stop application. Works in IntelliJ console.
