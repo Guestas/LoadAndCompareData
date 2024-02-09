@@ -23,6 +23,7 @@ public class LoadSubFileFindByIdAndCompare {
             while ((line = file.readLine()) != null) {
                 List<String> subData = Arrays.stream(line.split(",")).toList();
                 if (mainData.get(0).equals(subData.get(0))) {
+                    file.close();
                     return compareData(mainHeader, subHeader, mainData, subData)?0L:Long.parseLong(subData.get(0));
                 }
             }

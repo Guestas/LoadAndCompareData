@@ -81,10 +81,11 @@ public class LoadMainFileThread implements Runnable {
                         // Find and compare data from the main file with the sub-file
                         Long result = LoadSubFileFindByIdAndCompare.findByIdAndCompare(headers, splited, subFileName);
                         if (result > 0L)
-                            System.out.println("Values not same: " + subFileName + " sub ID: " + splited.get(0));
+                            System.out.println("In file: "+ subFileName +" different values in comparison with main file, ID: " + splited.get(0));
                     }
                 }
             }
+            file.close();
 
             // Check for duplicates in the list of IDs from the main file with sub file ids which will be loaded
             List<Long> duplicates = CheckListsOfIds.checkListForDuplicates(idInFileList);

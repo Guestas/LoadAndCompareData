@@ -25,9 +25,9 @@ public class CheckListsOfIds {
                 (!redundantInSub.isEmpty()?5:0);
 
         String message = "In file: "+ fileToLoadName +
-                (!duplicatedValuesInSub.isEmpty()?" Duplicates with IDs : " + duplicatedValuesInSub:" ") +
-                (!missingInSub.isEmpty()?" Missing with IDs : " + missingInSub:" ") +
-                (!redundantInSub.isEmpty()?" Redundant with IDs: " + redundantInSub:" ") +
+                (!duplicatedValuesInSub.isEmpty()?" Duplicated IDs : " + duplicatedValuesInSub:"") +
+                (!missingInSub.isEmpty()?" Missing IDs : " + missingInSub:"") +
+                (!redundantInSub.isEmpty()?" Redundant IDs: " + redundantInSub:"") +
                 (!arraysAreSame?" ":" IDs corresponding correctly and no duplicates.");
 
         System.out.println(message);

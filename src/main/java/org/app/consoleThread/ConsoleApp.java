@@ -1,13 +1,11 @@
 package org.app.consoleThread;
 
+import org.app.MainLoadAndCompareData;
 import org.app.loadingAndCheckingDataSubPrograms.LoadMainFileThread;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
-import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 public class ConsoleApp {
     private volatile boolean running = true;
@@ -23,7 +21,7 @@ public class ConsoleApp {
     public ConsoleApp() {
         //loading from properties
         Properties properties = new Properties();
-        try (FileInputStream fis = new FileInputStream("src/main/resources/application.properties")) {
+        try (FileInputStream fis = new FileInputStream(Objects.requireNonNull(MainLoadAndCompareData.class.getClassLoader().getResource("application.properties")).getFile())) {
             properties.load(fis);
         } catch (IOException e) {
             e.printStackTrace();

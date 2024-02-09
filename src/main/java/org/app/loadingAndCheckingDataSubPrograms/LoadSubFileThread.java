@@ -48,6 +48,7 @@ public class LoadSubFileThread implements Runnable {
                     System.out.println(e);
                 }
             }
+            file.close();
             CheckListsOfIds.testAllSubTestsWithSubFileData(idsInMinFileList, idInFileList, nameOfFileToLoad);
         } catch (IOException e) {
             throw new RuntimeException(e);
